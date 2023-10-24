@@ -1,0 +1,322 @@
+body{
+    font-family: Roboto,Helvetica Neue,sans-serif;
+    margin:0;
+    padding:0;
+    height:100%;
+}
+
+#loadingScreen{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    background-color: black;
+    text-align: center;
+}
+
+#loading-wrapper{
+    max-width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+#loadingimg{
+    width: 400px;
+    max-width: 100%;
+    height: auto;
+}
+
+#loadingBar{
+    border-radius: 10px;
+    width: 500px;
+    max-width: 100%;
+    height: 30px;
+    background-color: aliceblue;
+}
+
+#loadingBarProgress{
+    border-radius: 10px;
+    width: 0%;
+    height: 100%;
+    background-color: lightcoral;
+}
+
+#pokedex{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh ;
+    width: 100vw;
+    display: none;
+    background-color: bisque;
+}
+
+header{ 
+    height: 80px;
+    box-shadow: 1px 1px 6px #0000001a;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+}
+
+#pokemonContainer{
+    
+    height: calc(100vh - 165px);
+    overflow-y: scroll;
+    padding-bottom: 50px;
+    
+}
+
+footer{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 40px;
+    margin: 0;
+    padding: 0;
+    background-color: bisque;
+    text-align: center;
+}
+
+#pokemonCardContainer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.pokemonCard{
+    width: 275px;
+    height: 325px;
+    border-radius: 15px;
+    text-align: center;
+    margin: 10px;
+    padding: 10px;
+    cursor: pointer;
+    overflow: hidden;
+    box-shadow: 0 16px 31px -17px rgba(0,31,97,0.6);
+}
+
+.Grass{
+    background-color: #9bcc50;
+}
+.Fire{
+    background-color: #fd7d24;
+}
+.Water{
+    background-color: #4592c4;
+}
+.Bug{
+    background-color: #729f3f;
+}
+.Normal{
+    background-color: #a4acaf;
+}
+.Poison{
+    background-color: #b97fc9;
+}
+.Electric{
+    background-color: #eed535;
+}
+.Ground{
+    background-color: #f7de3f;
+}
+.Fighting{
+    background-color: #d56723;
+}
+.Psychic{
+    background-color: #f366b9;
+}
+.Rock{
+    background-color: #a38c21;
+}
+.Ghost{
+    background-color: #7b62a3;
+}
+.Dark{
+    background-color: #707070;
+}
+.Ice{
+    background-color: #51c4e7;
+}
+.Steel{
+    background-color: #9eb7b8;
+}
+.Fairy{
+    background-color: #fdb9e9;
+}
+.Dragon{
+    background-color: #f16e57;
+}
+.Flying{
+    background-color: #bdb9b8;
+}
+
+.pokemonName{
+    margin: 0px;
+}
+
+.pokemonElement{
+    margin: 0px;
+    margin-bottom: 10px;
+}
+
+.pokemonImage{
+    width: 250px;
+    height: 250px;
+}
+
+#pokemonInfoCardBG{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(143, 143, 143, 0.9);
+    display: none;
+}
+
+#pokemonInfoCard{
+    max-width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    width: 450px;
+    height: 620px;
+    border-radius: 20px;
+    text-align: center;
+    cursor: pointer;
+    box-shadow: 0 30px 50px -17px rgba(0, 0, 0, 0.7);
+}
+
+.arrowLeft{
+    position: absolute;
+    cursor: pointer;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-400px,-50%);
+    -ms-transform: translate(-400px,-50%);
+    transform: translate(-400px,-50%);
+    width: 200px;
+    height: 200px;
+}
+.arrowRight{
+    position: absolute;
+    cursor: pointer;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(250px,-50%);
+    -ms-transform: translate(250px,-50%);
+    transform: translate(250px,-50%);
+    width: 200px;
+    height: 200px;
+}
+
+.statBar-wrapper{
+    display: flex;
+}
+
+.statBar{
+    background-color: white; 
+    width: 46px; 
+    height: 146px; 
+    margin: 12px;
+    padding: 2px;
+    border-radius: 10px;
+    transform: rotate(180deg);
+}
+
+.statBarHp{
+    background-color: rgb(2, 189, 18);
+    height: 146px; 
+    width: 46px;
+    border-radius: 8px;
+    transform: rotate(180deg);
+}
+.statBarAtt{
+    background-color: rgb(255, 27, 27);
+    height: 146px; 
+    width: 46px;
+    border-radius: 8px;
+    transform: rotate(180deg);
+}
+.statBarDef{
+    background-color: rgb(255, 226, 3);
+    height: 146px; 
+    width: 46px;
+    border-radius: 8px;
+    transform: rotate(180deg);
+}
+.statBarSpAtt{
+    background-color: rgb(180, 0, 0);
+    height: 146px; 
+    width: 46px;
+    border-radius: 8px;
+    transform: rotate(180deg);
+}
+.statBarSpDef{
+    background-color: rgb(212, 170, 0);
+    height: 146px; 
+    width: 46px;
+    border-radius: 8px;
+    transform: rotate(180deg);
+}
+.statBarSpe{
+    background-color: rgb(64, 174, 242);
+    height: 146px; 
+    width: 46px;
+    border-radius: 8px;
+    transform: rotate(180deg);
+}
+.statBarProgressHp{
+    background-color: white;
+    height: 0%; 
+    width: 46px;
+    border-radius: 0px 0px 8px 8px;
+    transform: rotate(180deg);
+}
+.statBarProgressAtt{
+    background-color: white;
+    height: 0%; 
+    width: 46px;
+    border-radius: 0px 0px 8px 8px;
+    transform: rotate(180deg);
+}
+.statBarProgressDef{
+    background-color: white;
+    height: 0%; 
+    width: 46px;
+    border-radius: 0px 0px 8px 8px;
+    transform: rotate(180deg);
+}
+.statBarProgressSpAtt{
+    background-color: white;
+    height: 0%; 
+    width: 46px;
+    border-radius: 0px 0px 8px 8px;
+    transform: rotate(180deg);
+}
+.statBarProgressSpDef{
+    background-color: white;
+    height: 0%; 
+    width: 46px;
+    border-radius: 0px 0px 8px 8px;
+    transform: rotate(180deg);
+}
+.statBarProgressSpe{
+    background-color: white;
+    height: 0%; 
+    width: 46px;
+    border-radius: 0px 0px 8px 8px;
+    transform: rotate(180deg);
+}
+

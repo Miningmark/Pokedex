@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link id="style" rel="stylesheet" href="css/style.css">
+    <title>Pokedex</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="js/index.js"></script>
+</head>
+<body>
+<!-- Loading Screen -->
+    <div id="loadingScreen" >
+        <div id="loading-wrapper">
+            <img id="loadingimg" src="img/Pokeball.png">
+            <div id="loadingBar">
+                <div id="loadingBarProgress"></div>
+            </div>
+            <p id="loadingName" style="color: white;">Pokemen</p>
+        </div>
+    </div>
+<!-- Pokemon karten vorschau -->
+    <div id="pokedex">
+        <header id="header">
+            <img  src="img/Pokeball.png" style="width: 70px; height: 70px;">
+            <h1 style="font-size: 70px; margin-bottom: 50px;">Pokedex</h1>
+        </header>
+        <div id="pokemonContainer">
+            <div id="pokemonCardContainer"></div>
+        </div>
+        <footer id="footer">
+            <p>Created by Miningmark</p>
+        </footer>
+    </div>
+
+    <div id="pokemonInfoCardBG" onclick="closeInfoCard(event)">
+        <div>
+            <img class="arrowLeft" src="img/back.svg" onclick="back(event)">
+        </div>
+        <div id="pokemonInfoCard" onclick="closeInfoCard(event)">
+            <h1 id="infoName">NAME</h1>
+            <div id="pokemonStats">
+                <h2>Stats</h2>
+                <div class="statBar-wrapper">
+                    <div>
+                        <div class="statBar">
+                            <div class="statBarHp">
+                                <div id="hpBar" class="statBarProgressHp"></div>
+                            </div>
+                        </div>
+                        <p>HP</p>
+                    </div>
+                    <div>
+                        <div class="statBar">
+                            <div class="statBarAtt">
+                                <div id="attBar" class="statBarProgressAtt"></div>
+                            </div>
+                        </div>
+                        <p>Attack</p>
+                    </div>
+                    <div>
+                        <div class="statBar">
+                            <div class="statBarDef">
+                                <div id="defBar" class="statBarProgressDef"></div>
+                            </div>
+                        </div>
+                        <p>Defense</p>
+                    </div>
+                    <div>
+                        <div class="statBar">
+                            <div class="statBarSpAtt">
+                                <div id="spAttBar" class="statBarProgressSpAtt"></div>
+                            </div>
+                        </div>
+                        <p>Special Attack</p>
+                    </div>
+                    <div>
+                        <div class="statBar">
+                            <div class="statBarSpDef">
+                                <div id="spDefBar" class="statBarProgressSpDef"></div>
+                            </div>
+                        </div>
+                        <p>Special Defense</p>
+                    </div>
+                    <div>
+                        <div class="statBar">
+                            <div class="statBarSpe">
+                                <div id="speBar" class="statBarProgressSpe"></div>
+                            </div>
+                        </div>
+                        <p>Speed</p>
+                    </div> 
+                </div>
+                <div style="display: flex;">
+                    <div style="margin: 10px; width: 160px;">
+                        <br>
+                        <br>
+                        <p>Type: <span id="cardType">test</span></p>
+                        <p>Height: <span id="cardHeight">0,00</span>m</p>
+                        <p>Weight: <span id="cardWeight">0,0</span>kg</p>
+                    </div>
+                    <div>
+                        <img id="cardImage" src="img/Pokeball.png" style="width: 250px; height: 250px;">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div>
+            <img class="arrowRight" src="img/forward.svg" onclick="forward(event)">
+        </div>
+    </div>
+</body>
+</html>
