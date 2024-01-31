@@ -53,7 +53,7 @@ async function init(){
 }
 
 async function loadPokemonList(){
-    await $.getJSON('https://pokeapi.co/api/v2/pokemon?limit=898&offset=0', function(data) {   //max 898
+    await $.getJSON('https://pokeapi.co/api/v2/pokemon?limit=151&offset=0', function(data) {   //max 898
         pokemonList = data.results;
     });
     return;
